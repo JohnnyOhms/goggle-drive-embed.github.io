@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100&display=swap');
+
+:root {
+    --white:#fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0919;
+    --color-sec: #db6400;
+    --color-grey: #ddd;
+    --color-dark-grey: #222831;
+    --light-grey:#768597;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100px;
+}
+
+main{
+    display: flex;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-container {
+    display: flex;
+}
+
+.info-container {
+    width: 30%;
+    height: 100hv;
+    padding: 2rem;
+    font-size: 11px;
+    background-color: var(--color-dark-grey);
+    color: var(--color-grey);
+
+}
+
+.main-container .info-container h1 {
+    font-size: 30px;
+    padding-bottom:1.5rem ;
+    color: var(--color-sec);
+}
+
+.container #line {
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    padding-bottom: 15px;
+}
+
+.container ol li p{
+    font-size:15px;
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.container ol li p a {
+    text-decoration: none;
+    color: var(--color-sec);
+}
+
+.link-container {
+    width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.link-container input[type=radio]{
+    display: none;
+}
+
+.link-container .container #head {
+    font-size: 35px;
+    font-weight: 100%;
+    line-height: 30px;
+    color: var(--light-blue);
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: var(--light-grey);
+    border: 2px solid var(--color-grey);
+    padding: 5px;
+    z-index: 1;
+}
+
+nav label {
+    position: relative;
+    color: var(--white);
+    padding: 5px;
+    font-size: 1.6rem;
+    font-weight:100%;
+    cursor: pointer;
+}
+
+nav label i {
+    color: var(--color-sec);
+    padding-right: 2px;
+}
+
+nav #slide {
+    position: absolute;
+    top:0;
+    left: 3%;
+    width: 120px;
+    height: 100%;
+    background-color: var(--light-blue);
+    border-radius: 3px;
+    z-index: -1;
+    transition: all .8s;
+}
+
+#second-radio:checked ~ nav #slide {
+    left: 230px;
+}
+
+#third-radio:checked ~ nav #slide {
+    left: 480px;
+}
+
+.link-container .link-section i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--color-sec);
+    padding: 2.5rem;
+    
+}
+
+.content {
+    display: none;
+}
+
+#first-radio:checked ~ .link-section .content-Glink {
+    display: block;
+}
+
+#second-radio:checked ~ .link-section .content-audio {
+    display: block;
+}
+
+#third-radio:checked ~ .link-section .content-video {
+    display: block;
+}
+
+.link-section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--light-blue);
+    
+}
+
+.content {
+    margin:5px auto;
+    padding: 1rem;
+}
+
+.content h2 {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 18px;
+    font-weight: 100%;
+    color: var(--light-blue);
+}
+
+.content form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.content form input {
+    display: block;
+    width: 100%;
+}
+
+.content form #text-field{
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    transition: all .8s;
+}
+
+.content form #text-field:focus:invalid {
+    font-size: 15px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.content form #text-field:valid {
+   font-size: 12px;
+    border-bottom: 2px solid green;
+}
+
+.content form #btn{
+    padding: 1.5rem;
+    background-color: var(--color-sec);
+    color: var(--black);
+    transition: all .8s;
+    cursor: pointer;
+}
+
+.content form #btn:hover{
+    /* padding: 2rem; */
+    font-size: 19px;
+}
+
+.content .link-field{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .link-field #textarea {
+    padding-top: 3rem;
+    width: 200px;
+    height: 11rem;
+    outline: none;
+    font-family: inherit;
+    justify-content: center;
+}
+
+.content .link-field .copy-link{
+    background-color: var(--light-blue);
+    color: var(--color-grey);
+    padding: 1rem;
+    position: absolute;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+.content .link-field .copy-link:hover{
+    font-size: 1.3rem;
+}
+
+.content p {
+    text-align: center;
+    font-size: 11px;
+}

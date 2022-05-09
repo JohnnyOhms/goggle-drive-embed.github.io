@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2dfc8161ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Google Drive Embeded link</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <div class="info-container">
+                <div class="container">
+                    <h1>Instructions</h1>
+                    <p id="line">Follow the following instruction to download from your google drive.</p>
+                    <hr>
+                    <ol>
+                        <li>
+                            <p>Open <a href="https://www.google.com/intl/en_ng/drive/">Google Drive</a></p>
+                        </li>
+                        <li>
+                            <p>Right click on the file to get a link</p>
+                        </li>
+                        <li>
+                            <p>Make link public and Copy</p>
+                        </li>
+                        <li>
+                            <p>Paste the link on the Generator and click generate</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="link-container">
+                <div class="container">
+                    <h1 id="head">Google Drive Embed Link</h1>
+                    <input type="radio" name="tab" id="first-radio" checked>
+                    <input type="radio" name="tab" id="second-radio">
+                    <input type="radio" name="tab" id="third-radio">
+                    <nav>
+                        <label for="first-radio" class="first-radio">
+                            <i class="fa-solid fa-clipboard"></i> Paste Link</label>
+                        <label for="second-radio">
+                            <i class="fa-solid fa-headphones"></i> embed Audio</label>
+                        <label for="third-radio">
+                            <i class="fa-solid fa-photo-film"></i> embed video & Doc</label>
+                        <div id ="slide"></div>
+                    </nav>
+                    <section class="link-section">
+                        <!--Google link-->
+                        <div class="content content-Glink">
+                            <i class="fa-solid fa-download"></i>
+                            <h2>Google Drive Link</h2>
+                            <hr>
+                            <form action="">
+                                <input type="text" name="text" id="text-field" placeholder="Paste you Google drive Link" required>
+                                <button class="btn" id="btn">Generate Link</button>
+                                <h2>Direct download Link</h2>
+                                <div class="link-field">
+                                    <textarea name="text" class="downloadlink" id="textarea" cols="30" rows="10"></textarea>
+                                    <span class="copy-link CopyDwnLink">Copy</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!--embeded Audio-->
+                        <div class="content content-audio">
+                            <i class="fa-solid fa-headphones"></i>
+                            <h2> Audio embeded Link</h2>
+                            <hr>
+                            <h2>Link to embed your audio on a webpage</h2>
+                            <form action="">
+                                <div class="link-field">
+                                    <textarea name="text" class="embedAudio" id="textarea" cols="30" rows="10"></textarea>
+                                    <span class="copy-link copyAudio">Copy</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!--embeded video-->
+                        <div class="content content-video">
+                            <i class="fa-solid fa-photo-film"></i>
+                            <h2>Video & doc embeded Link</h2>
+                            <hr>
+                            <h2>Link to embed your audio on a webpage</h2>
+                            <form action="">
+                                <div class="link-field">
+                                    <textarea name="text" class="embedVideo" id="textarea" cols="30" rows="10"></textarea>
+                                    <span class="copy-link copyVideo">Copy</span>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
